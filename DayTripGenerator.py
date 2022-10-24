@@ -16,30 +16,17 @@ def generate_random_item(list): #generate a random item from a list of 4 strings
     elif random_item == 3 :
         return list[3]
 
-#test
-# destination_item = generate_random_item(destination_list)
-# print(destination_item)
-
-def print_full_trip(lists): #only function is to run in beginning of final function call
+def print_full_trip(lists): #generate and save random item from [list_of_lists]
     destination = generate_random_item(destination_list)
     restaurant = generate_random_item(restaurant_list)
     transportation = generate_random_item(transportation_list)
     entertainment = generate_random_item(entertainment_list)
     for element in range(len(lists)):
-        # print('Here is a randomly generated day trip!')
-        # print(f'Destination: {destination}')
-        # print(f'Restaurant: {restaurant}')
-        # print(f'Transportation: {transportation}')
-        # print(f'Entertainment: {entertainment}')
         return destination, restaurant, transportation, entertainment
 
 destination, restaurant, transportation, entertainment = print_full_trip(list_of_lists)
-# print(destination)         
 
-#test
-# print_full_trip(list_of_lists)
-
-def validate_items():
+def validate_items(): # validate and confirm items to be printed out (with user input)
     valid_item = False
     user_input = ''
     final_destination = destination
@@ -119,16 +106,8 @@ Have an amazing time on your day trip!
             valid_item = False
     return destination, restaurant, transportation, entertainment
 
-# validated_item = validate_items()
-# print(validated_item)
-
-def run_day_trip_generator():
+def run_day_trip_generator(): # final function to generate day trip
     print_full_trip(list_of_lists)
     validate_items()
 
 run_day_trip_generator()
-
-
-# def run_day_trip_generator():
-#     print_full_trip(list_of_lists)
-#     validate_item()
