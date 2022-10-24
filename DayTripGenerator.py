@@ -64,6 +64,7 @@ destination
 restaurant
 transportation
 entertainment
+all
 ''')
             if user_input == 'destination' :
                 new_destination_item = generate_random_item(destination_list)
@@ -85,10 +86,26 @@ entertainment
                 print(f'New Entertainment: {new_entertainment_item}')
                 final_entertainment = new_entertainment_item
                 valid_item = False
+            elif user_input == 'all' :
+                new_destination_item = generate_random_item(destination_list)
+                new_restaurant_item = generate_random_item(restaurant_list)
+                new_transportation_item = generate_random_item(transportation_list)
+                new_entertainment_item = generate_random_item(entertainment_list)
+                print(f'''Newly generated list:
+{new_destination_item}
+{new_restaurant_item}
+{new_transportation_item}
+{new_entertainment_item}''')
+                final_destination = new_destination_item
+                final_restaurant = new_restaurant_item
+                final_transportation = new_transportation_item
+                final_entertainment = new_entertainment_item
+                valid_item = False
+            else:
+                valid_item = False
         elif user_input_response == 'yes' :
             print(f'''
-Great! Here is your final result!
-
+Great! Here is your final results:
 Destination: {final_destination}
 Restaurant: {final_restaurant}
 Transportation: {final_transportation}
